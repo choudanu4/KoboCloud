@@ -48,7 +48,7 @@ while read url || [ -n "$url" ]; do
     elif echo $url | grep -q '^https*://app.box.com'; then
       $KC_HOME/getBoxFiles.sh "$url" "$Lib"
     else
-      $KC_HOME/getOwncloudFiles.sh "$url" "$Lib"
+      $KC_HOME/getWebdavFiles.sh "$url" "$Lib"
     fi
   fi
 done < $UserConfig
