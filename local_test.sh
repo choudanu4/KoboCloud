@@ -33,7 +33,7 @@ then
     # ├── 02/
     # │    ├── ulysses.epub
     # │    ├── ulysses02.epub
-│   # ├── ulysses.epub
+    # ├── ulysses.epub
     URL='https://nc01.adruna.org/s/Y72RfYJM79jct8N'
 elif [ "$SERVICE" = "nextcloudsubdirpath" ]
 then
@@ -46,10 +46,13 @@ then
     # ├── 02/
     # │    ├── ulysses.epub
     # │    ├── ulysses02.epub
-│   # ├── ulysses.epub
+    # ├── ulysses.epub
     URL='https://nc02.adruna.org/nextcloud/s/wsA7DSNjfYgBmw4'
-else
+elif [ "$SERVICE" = "google" ]
+then
     URL='https://drive.google.com/drive/folders/1Wi37shmjG56L1D8OSdIZstkUfnpTsdAp'
+else
+    URL='http://raspberrypi-jnovel:8080/ulysses.epub'
 fi
 
 . src/usr/local/kobocloud/config_pc.sh
