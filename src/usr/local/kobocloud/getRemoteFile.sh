@@ -29,7 +29,7 @@ echo "Output: "
 cat $outputFileTmp
 
 statusCode=`cat $outputFileTmp | grep 'HTTP/' | tail -n 1 | cut -d' ' -f3`
-mv $outputFileTmp $outputFileTmp".bak"
+rm $outputFileTmp
 
 echo "Remote file information:"
 echo "  Status code: $statusCode"
